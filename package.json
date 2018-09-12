@@ -1,0 +1,27 @@
+{
+  "name": "imooc-react-webpack",
+  "version": "1.0.0",
+  "description": "* webapp架构\r     * 解放生产力\r     * 围绕解决方案搭建环境\r     * 保证项目质量",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config ./webpack.dev.config.js --mode development",
+    "build": "webpack --config ./build/webpack.conf.js --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doing123/imooc-react-webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doing123/imooc-react-webpack/issues"
+  },
+  "homepage": "https://github.com/doing123/imooc-react-webpack#readme",
+  "dependencies": {
+    "react": "^16.5.0",
+    "webpack": "^4.18.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  }
+}
