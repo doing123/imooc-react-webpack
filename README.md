@@ -13,3 +13,9 @@
 * 今天写移动端，没有scroll事件，使用better-scroll，移动端的事件还是要好好研究下
 
 * webpack 基本配置
+
+* 服务端渲染配置
+
+* Route：history、hash
+
+* store：flux，单向数据流（mobx,redux）
