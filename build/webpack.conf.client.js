@@ -1,7 +1,8 @@
 const path = require('path')
 const HTMLPlugin = require('html-webpack-plugin')
+const isDev = process.env.NODE_ENV === 'development'
 
-module.exports = {
+const config = {
     entry: {
         app: path.join(__dirname, '../client/app.js')
     },
@@ -31,3 +32,21 @@ module.exports = {
         })
     ]
 }
+
+if (isDev) {
+    config.devServer = {
+        host: '0.0.0.0', // 可以使用 localhost， 127.0.0.1， 本机IP访问
+        port: '8888',
+        contentBase: path.join(__dirname, '../dist'), // 该目录下启动
+        // hot: true,
+        overlay: {
+            errors: true
+        },
+        publicPath: '/public', // 静态资源前加 ‘/public’
+        historyApiFallback: {
+            index: '/public/index.html'
+        }
+    }
+}
+
+module.exports = config

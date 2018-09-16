@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config ./webpack.dev.config.js --mode development",
+    "dev:client": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.conf.client.js",
     "build:client": "webpack --config build/webpack.conf.client.js --mode production",
     "build:server": "webpack --config build/webpack.conf.server.js --mode production",
     "clear": "rimraf dist",
@@ -37,6 +38,7 @@
     "babel-preset-es2015-loose": "^8.0.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "cross-env": "^5.2.0",
     "html-webpack-plugin": "^3.2.0",
     "rimraf": "^2.6.2",
     "webpack": "^4.18.0",
