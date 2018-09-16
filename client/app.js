@@ -6,21 +6,21 @@ import App from './App.jsx'
 // ReactDom.hydrate(<App />, document.getElementById('root'))
 
 const root = document.getElementById('root')
-const render = Component => {
-    ReactDom.hydrate(
-        <AppContainer>
-            <Component />
-        </AppContainer>,
-        root
-    )
+const render = (Component) => {
+  ReactDom.hydrate(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    root,
+  )
 }
 
 render(App)
 
 if (module.hot) {
-    module.hot.accept('./App.jsx', () => {
-        const NextApp = require('./App.jsx').default
-        // ReactDOM.hydrate(<NextApp />, document.getElementById('root'))
-        render(NextApp)
-    })
+  module.hot.accept('./App.jsx', () => {
+    const NextApp = require('./App.jsx').default // eslint-disable-line
+    // ReactDOM.hydrate(<NextApp />, document.getElementById('root'))
+    render(NextApp)
+  })
 }
