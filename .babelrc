@@ -4,5 +4,5 @@
         "stage-1",
         "react"
     ],
-    "plugins":["transform-react-jsx"]
+    "plugins":["transform-react-jsx", "react-hot-loader/babel"]
 }
