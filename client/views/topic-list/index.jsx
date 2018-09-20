@@ -23,7 +23,7 @@ export default class TopicList extends React.Component {
 
   changeName(event) {
     const { appState } = this.props
-    appState.name = event.target.value
+    appState.changeName(event.target.value)
   }
 
   render() {
