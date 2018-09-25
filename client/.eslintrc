@@ -13,6 +13,7 @@
     "rules": {
         "semi": [0],
         "react/jsx-filename-extension": [0],
-        "jsx-ally/anchor-is-valid": [0]
+        "jsx-ally/anchor-is-valid": [0],
+        "linebreak-style": [0]
     }
 }

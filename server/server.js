@@ -14,17 +14,19 @@ app.use(bodyParser.json()) // json数据转为 req body 上的数据
 app.use(bodyParser.urlencoded({ extended: false })) // form data数据转化为 req body 上的数据
 
 app.use(session({
-  maxAge: 10 * 60 * 1000,
+  cookie: {
+    maxAge: 10 * 60 * 1000
+  },
   name: 'tid',
   resave: false,
   saveUninitialized: false,
   secret: 'get cnode api'
 }))
 
-app.use(favicon(path.join(__dirname, '../favicon.ico')))
-
 app.use('/api/user', require('./util/handle-login'))
 app.use('/api', require('./util/proxy'))
+
+app.use(favicon(path.join(__dirname, '../favicon.ico')))
 
 if (!isDev) {
     const serverEntry = require('../dist/server-entry').default
