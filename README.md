@@ -19,3 +19,4 @@
 * Route：history、hash
 
 * store：flux，单向数据流（mobx,redux）
+s
